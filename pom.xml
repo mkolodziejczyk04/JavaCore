@@ -49,9 +49,6 @@
                     <forkCount>0</forkCount>
                     <useSystemClassLoader>false</useSystemClassLoader>
                     <testFailureIgnore>true</testFailureIgnore>
-                    <includes>
-                              <include>**/*Tests.java</include>
-                  </includes>
                 </configuration>
             </plugin>
 
