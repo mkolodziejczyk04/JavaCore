@@ -41,13 +41,12 @@ public class Main {
         processedNames.forEach(System.out::println);
 
         System.out.println("Task 3.7: ");
-        thirdTask.isContainsNamesWithLetterS();
+        boolean containsAnyNameWithLetterS = thirdTask.isContainsAnyNameWithLetterS();
+        thirdTask.displayList();
+        System.out.println(containsAnyNameWithLetterS);
 
-        boolean containLetterS = thirdTask.isContainsNamesWithLetterS();
-        System.out.println(containLetterS);
-
-        boolean notContainLetterS = thirdTask.isNotContainsNamesWithLetterS();
-        System.out.println(notContainLetterS);
+        boolean containsAllNameWithLetterS = thirdTask.isContainsAllNamesWithLetterS();
+        System.out.println(containsAllNameWithLetterS);
 
         boolean notContainLetterH = thirdTask.isContainsNamesWithLetterH();
         System.out.println(notContainLetterH);

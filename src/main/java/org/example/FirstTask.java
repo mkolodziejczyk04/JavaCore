@@ -1,16 +1,17 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class FirstTask {
-    private Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
+    private List<Integer> listOfNumbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9));
     private Random random = new Random();
 
     public void displayNumbers() {
-        stream.forEach(System.out::println);
+        listOfNumbers.stream().forEach(System.out::println);
     }
 
     public List<Integer> getRandomNumbers() {

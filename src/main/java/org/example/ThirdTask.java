@@ -35,12 +35,12 @@ public class ThirdTask {
                 .collect(Collectors.toList());
     }
 
-    public boolean isContainsNamesWithLetterS() {
+    public boolean isContainsAllNamesWithLetterS() {
         return memberNames.stream()
                 .allMatch(s -> s.contains("S"));
     }
 
-    public boolean isNotContainsNamesWithLetterS() {
+    public boolean isContainsAnyNameWithLetterS() {
         return memberNames.stream()
                 .anyMatch(s -> s.contains("S"));
     }
@@ -52,7 +52,7 @@ public class ThirdTask {
 
     public Long countNumberOfStringsWithLetterA() {
         return memberNames.stream()
-                .filter(s -> s.contains("A"))
+                .filter(s -> s.startsWith("A"))
                 .count();
     }
 
@@ -60,5 +60,9 @@ public class ThirdTask {
         return memberNames.stream()
                 .filter(s -> s.startsWith("L"))
                 .findFirst().orElse("This list doesn't have string with letter L");
+    }
+
+    public void displayList(){
+        memberNames.stream().forEach(System.out::println);
     }
 }

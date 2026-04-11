@@ -28,15 +28,15 @@ public class ThirdTaskTests {
     }
 
     @Test
-    void containsStringWithLetterS() {
-        boolean actualResult = thirdTask.isContainsNamesWithLetterS();
-        assertThat(actualResult).as("This list is not having string with letter S").isFalse();
+    void containsAnyStringWithLetterS() {
+        boolean actualResult = thirdTask.isContainsAnyNameWithLetterS();
+        assertThat(actualResult).as("This list is not having string with letter S").isTrue();
     }
 
     @Test
-    void notContainsStringWithLetterS() {
-        boolean actualResult = thirdTask.isNotContainsNamesWithLetterS();
-        assertThat(actualResult).as("This list contains string with letter S").isTrue();
+    void notContainsAllStringWithLetterS() {
+        boolean actualResult = thirdTask.isContainsAllNamesWithLetterS();
+        assertThat(actualResult).as("This list contains string with letter S").isFalse();
     }
 
     @Test
@@ -46,7 +46,7 @@ public class ThirdTaskTests {
     }
 
     @Test
-    void howManyStringsIsHavingLetterA() {
+    void howManyStringsStartingWithLetterA() {
         Long numberOfStringsWithLetterA = thirdTask.countNumberOfStringsWithLetterA();
         long expectedResult = 3L;
         assertThat(numberOfStringsWithLetterA).as("This list is not having 3 strings with letter A").isEqualTo(expectedResult);
